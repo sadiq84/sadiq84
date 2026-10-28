@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- 3D & ANIMATED HERO BANNER -->
-<img src="banner.svg" alt="Sadiq - Senior DevSecOps &amp; Cloud Architect" width="100%" />
+<img src="banner.svg" alt="Mohammad Sadique Qutub - Senior DevSecOps &amp; Cloud Architect" width="100%" />
 
 <br/><br/>
 
@@ -388,7 +388,7 @@ Senior engineers and architects regularly evaluate, negotiate with, and govern e
 <div align="center">
 
 ### 🤝 Connect & Inquire
-**Sadiq** • Senior DevOps & Cloud Solutions Architect  
+**Mohammad Sadique Qutub** • Senior DevOps & Cloud Solutions Architect  
 [![Email](https://img.shields.io/badge/Email-mohd.sadiq84@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:mohd.sadiq84@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-sadiq84-181717?style=flat-square&logo=github)](https://github.com/sadiq84)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live_Site-0078D4?style=flat-square&logo=googlechrome)](https://sadiq84.github.io/sadiq84/)
