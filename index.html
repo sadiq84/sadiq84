@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevSecOps & Cloud Architect Portfolio | Senior Interview Preparation Guide</title>
+  <meta name="description" content="Senior DevOps / Cloud Architect Interview Preparation Guide & Enterprise Portfolio: Landing Zones, 100+ Workload Migration, DevSecOps Automation, FinOps, and Governance.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfeff',
+              100: '#cffafe',
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+              900: '#164e63',
+            },
+            azure: {
+              500: '#0078d4',
+              600: '#0062ad',
+              700: '#004c87',
+            },
+            cyber: {
+              dark: '#0a0f1d',
+              card: '#111827',
+              border: '#1f293d',
+              accent: '#10b981',
+              neon: '#38bdf8'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Mermaid.js for Diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'dark',
+      themeVariables: {
+        darkMode: true,
+        background: '#111827',
+        primaryColor: '#0078d4',
+        primaryTextColor: '#f8fafc',
+        primaryBorderColor: '#38bdf8',
+        lineColor: '#64748b',
+        secondaryColor: '#1e293b',
+        tertiaryColor: '#0f172a'
+      }
+    });
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0f1d;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #38bdf8;
+    }
+    
+    .glow-cyan {
+      box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.25);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25);
+    }
+    .glow-azure {
+      box-shadow: 0 0 30px -5px rgba(0, 120, 212, 0.3);
+    }
+    .glass-panel {
+      background: rgba(17, 24, 39, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.12);
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .code-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 0.375rem;
+    }
+    
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .glass-panel, .glass-card {
+        background: #ffffff !important;
+        border: 1px solid #cccccc !important;
+        color: #000000 !important;
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#070b14] text-slate-100 antialiased font-sans min-h-screen selection:bg-cyan-500 selection:text-black">
+
+  <!-- Top Progress Bar -->
+  <div id="scrollProgressBar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-emerald-400 z-50 transition-all duration-150" style="width: 0%;"></div>
+
+  <!-- Global Header / Navbar -->
+  <header class="sticky top-0 z-40 w-full glass-panel border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-600 via-azure-500 to-emerald-400 p-0.5 flex items-center justify-center shadow-lg shadow-cyan-500/20">
+          <div class="w-full h-full bg-[#0a0f1d] rounded-[10px] flex items-center justify-center">
+            <i class="fa-solid fa-shield-halved text-cyan-400 text-lg"></i>
+          </div>
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <span class="font-extrabold text-base tracking-tight text-white">SADIQ<span class="text-cyan-400">84</span></span>
+            <span class="hidden sm:inline-block px-2 py-0.5 text-[10px] font-semibold tracking-wider uppercase bg-cyan-950/80 text-cyan-300 border border-cyan-800/60 rounded-full">Senior DevSecOps & Cloud Architect</span>
+          </div>
+          <p class="text-xs text-slate-400 font-mono hidden sm:block">Enterprise Architecture & Interview Blueprint</p>
+        </div>
+      </div>
+
+      <!-- Search & Quick Navigation -->
+      <div class="flex items-center space-x-3">
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="xl:hidden p-2 text-slate-400 hover:text-cyan-400 transition" aria-label="Toggle Navigation">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+
+        <div class="relative hidden md:block w-56 lg:w-72">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+          <input 
+            type="text" 
+            id="globalSearch" 
+            placeholder="Search architecture, tools, FinOps... (Press /)" 
+            class="w-full pl-9 pr-8 py-1.5 bg-slate-900/90 text-xs text-slate-200 rounded-lg border border-slate-700/80 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition"
+          />
+          <kbd class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] font-mono text-slate-500 bg-slate-800 px-1.5 py-0.5 rounded border border-slate-700">/</kbd>
+        </div>
+
+        <button onclick="toggleQuickFlashcardMode()" id="flashcardBtn" class="px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center space-x-1.5 transition">
+          <i class="fa-solid fa-bolt text-amber-400"></i>
+          <span class="hidden sm:inline">Executive Summary</span>
+          <span class="sm:hidden">Summary</span>
+        </button>
+
+        <a href="https://github.com/sadiq84" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white shadow-md shadow-cyan-600/20 flex items-center space-x-1.5 transition">
+          <i class="fa-brands fa-github text-sm"></i>
+          <span class="hidden sm:inline">GitHub</span>
+        </a>
+
+        <button onclick="window.print()" title="Print / Export PDF" class="p-2 text-slate-400 hover:text-cyan-400 transition no-print">
+          <i class="fa-solid fa-print"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div id="mobileDrawerBackdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="mobileDrawer" class="fixed top-0 left-0 bottom-0 w-80 max-w-[85vw] bg-[#0a0f1d] border-r border-slate-800 p-5 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out overflow-y-auto">
+    <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-shield-halved text-cyan-400"></i>
+        <span class="font-bold text-white text-sm">Architecture Navigation</span>
+      </div>
+      <button id="closeMobileDrawer" class="p-1.5 text-slate-400 hover:text-white">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+    </div>
+    <nav class="space-y-1.5 text-xs mt-4" id="mobileNavLinks">
+      <a href="#hero" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">00</span>
+        <span>Executive Overview</span>
+      </a>
+      <a href="#section-1" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">01</span>
+        <span>Portfolio &amp; Standing Out</span>
+      </a>
+      <a href="#section-2" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">02</span>
+        <span>IT Career Tracks &amp; Roles</span>
+      </a>
+      <a href="#section-3" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">03</span>
+        <span>Senior Mindset &amp; Alignment</span>
+      </a>
+      <a href="#section-4" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">04</span>
+        <span>100+ Workload Migration</span>
+      </a>
+      <a href="#section-5" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">05</span>
+        <span>CAF &amp; Management Hierarchy</span>
+      </a>
+      <a href="#section-6" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">06</span>
+        <span>Hub-and-Spoke Networking</span>
+      </a>
+      <a href="#section-7" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">07</span>
+        <span>Defense-in-Depth Security</span>
+      </a>
+      <a href="#section-8" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">08</span>
+        <span>Terraform Landing Zone CI/CD</span>
+      </a>
+      <a href="#section-9" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">09</span>
+        <span>Azure Repos &amp; DevSecOps YAML</span>
+      </a>
+      <a href="#section-10" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">10</span>
+        <span>End-to-End Migration Strategy</span>
+      </a>
+      <a href="#section-11" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">11</span>
+        <span>FinOps Cloud Cost Optimization</span>
+      </a>
+      <a href="#section-12" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">12</span>
+        <span>DR, High Availability &amp; RTO/RPO</span>
+      </a>
+      <a href="#section-13" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">13</span>
+        <span>Enterprise Observability &amp; AMA</span>
+      </a>
+      <a href="#section-14" class="mobile-link flex items-center px-3 py-2 rounded-lg text-slate-300 hover:bg-slate-800 hover:text-cyan-400 transition">
+        <span class="w-6 text-slate-500 font-mono text-[10px]">14</span>
+        <span>Vendor Governance &amp; RACI</span>
+      </a>
+    </nav>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex gap-8">
+    
+    <!-- Left Sticky Sidebar TOC (Desktop) -->
+    <aside class="hidden xl:block w-72 shrink-0">
+      <div class="sticky top-24 glass-panel rounded-2xl p-4 border border-slate-800/80 max-h-[calc(100vh-7rem)] overflow-y-auto">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-800 mb-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono">Architecture Matrix</span>
+          <span class="text-[10px] px-2 py-0.5 bg-emerald-950 text-emerald-400 rounded-full border border-emerald-800 font-mono">14 Modules</span>
+        </div>
+        <nav class="space-y-1 text-xs" id="sidebarNav">
+          <a href="#hero" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">00</span>
+            <span>Executive Overview</span>
+          </a>
+          <a href="#section-1" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">01</span>
+            <span>Portfolio & Standing Out</span>
+          </a>
+          <a href="#section-2" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">02</span>
+            <span>IT Career Tracks & Roles</span>
+          </a>
+          <a href="#section-3" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">03</span>
+            <span>Senior Mindset & Alignment</span>
+          </a>
+          <a href="#section-4" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">04</span>
+            <span>100+ Workload Migration & 10 Pillars</span>
+          </a>
+          <a href="#section-5" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">05</span>
+            <span>CAF, Governance & Hierarchy</span>
+          </a>
+          <a href="#section-6" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">06</span>
+            <span>Hub-and-Spoke Networking</span>
+          </a>
+          <a href="#section-7" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">07</span>
+            <span>Defense-in-Depth Security</span>
+          </a>
+          <a href="#section-8" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">08</span>
+            <span>Terraform Landing Zone CI/CD</span>
+          </a>
+          <a href="#section-9" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">09</span>
+            <span>Azure Repos & DevSecOps YAML</span>
+          </a>
+          <a href="#section-10" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">10</span>
+            <span>End-to-End Migration Strategy</span>
+          </a>
+          <a href="#section-11" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">11</span>
+            <span>FinOps Cloud Cost Optimization</span>
+          </a>
+          <a href="#section-12" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">12</span>
+            <span>DR, High Availability & RTO/RPO</span>
+          </a>
+          <a href="#section-13" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">13</span>
+            <span>Enterprise Observability & AMA</span>
+          </a>
+          <a href="#section-14" class="sidebar-link flex items-center px-2.5 py-1.5 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 transition">
+            <span class="w-5 text-slate-500 font-mono text-[10px]">14</span>
+            <span>Vendor Governance & RACI</span>
+          </a>
+        </nav>
+
+        <!-- Quick Metrics Box -->
+        <div class="mt-6 p-3 bg-slate-900/90 rounded-xl border border-slate-800 text-[11px] space-y-2">
+          <div class="text-slate-400 font-mono font-medium flex items-center justify-between">
+            <span>TARGET SCALE</span>
+            <span class="text-cyan-400">100+ Workloads</span>
+          </div>
+          <div class="text-slate-400 font-mono font-medium flex items-center justify-between">
+            <span>FINOPS ROI</span>
+            <span class="text-emerald-400">-28% Spend</span>
+          </div>
+          <div class="text-slate-400 font-mono font-medium flex items-center justify-between">
+            <span>DOWNTIME</span>
+            <span class="text-blue-400">Zero (N-tier cutover)</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Stream -->
+    <main class="flex-1 min-w-0 space-y-12">
+
+      <!-- HERO SECTION -->
+      <section id="hero" class="relative overflow-hidden rounded-3xl glass-panel p-6 sm:p-10 border border-slate-800 glow-cyan">
+        <div class="absolute -right-20 -top-20 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-20 -bottom-20 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10">
+          <div class="flex flex-wrap items-center gap-2 mb-4">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-cyan-950/90 text-cyan-300 border border-cyan-800/80">
+              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse mr-2"></span>
+              Enterprise Architect & Lead Dossier
+            </span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">
+              <i class="fa-solid fa-cloud mr-1.5 text-blue-400"></i> Microsoft Azure Landing Zones
+            </span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono bg-slate-800 text-slate-300 border border-slate-700">
+              <i class="fa-solid fa-shield-virus mr-1.5 text-emerald-400"></i> Shift-Left DevSecOps
+            </span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Senior DevOps &amp; Cloud Architect <br class="hidden sm:block">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-emerald-400">
+              Master Interview &amp; Architecture Blueprint
+            </span>
+          </h1>
+
+          <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-3xl leading-relaxed">
+            Comprehensive production-grade guide covering enterprise governance, multi-region Hub-and-Spoke networking, 100+ workload cloud migration, automated Terraform landing zones with drift detection, multi-layered Zero-Trust defense, FinOps cost governance, and executive vendor management.
+          </p>
+
+          <!-- Core Metrics Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-slate-800/80">
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
+              <div class="text-2xl font-bold font-mono text-cyan-400">100+</div>
+              <div class="text-xs text-slate-400 font-medium">Enterprise Workloads</div>
+              <div class="text-[10px] text-slate-500 mt-1">Dev, UAT &amp; Prod Migration</div>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
+              <div class="text-2xl font-bold font-mono text-emerald-400">28%</div>
+              <div class="text-xs text-slate-400 font-medium">Cloud Spend Reduction</div>
+              <div class="text-[10px] text-slate-500 mt-1">FinOps, Rightsizing &amp; RIs</div>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
+              <div class="text-2xl font-bold font-mono text-blue-400">100%</div>
+              <div class="text-xs text-slate-400 font-medium">IaC &amp; Drift Guardrails</div>
+              <div class="text-[10px] text-slate-500 mt-1">Terraform + Checkov + CI/CD</div>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800">
+              <div class="text-2xl font-bold font-mono text-amber-400">Zero</div>
+              <div class="text-xs text-slate-400 font-medium">Downtime Cutover</div>
+              <div class="text-[10px] text-slate-500 mt-1">N-Tier Replication &amp; ASR</div>
+            </div>
+          </div>
+
+          <!-- Quick CTA Bar -->
+          <div class="flex flex-wrap items-center gap-3 mt-6">
+            <a href="#section-4" class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm shadow-lg shadow-cyan-500/25 transition flex items-center space-x-2">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span>Explore 100+ Migration Scenario</span>
+            </a>
+            <a href="#section-6" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 transition flex items-center space-x-2">
+              <i class="fa-solid fa-network-wired text-cyan-400"></i>
+              <span>Hub-and-Spoke Networking</span>
+            </a>
+            <a href="#section-8" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 transition flex items-center space-x-2">
+              <i class="fa-solid fa-terminal text-emerald-400"></i>
+              <span>DevSecOps &amp; Terraform Pipeline</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Filter Pills Bar -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 text-xs font-mono no-print">
+        <span class="text-slate-500 uppercase tracking-wider text-[11px] mr-1 hidden sm:inline">Filter By Domain:</span>
+        <button onclick="filterCategory('all', this)" class="cat-pill px-3 py-1.5 rounded-lg bg-cyan-500 text-slate-950 font-bold border border-cyan-400 transition">All (14)</button>
+        <button onclick="filterCategory('architecture', this)" class="cat-pill px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:text-cyan-300 border border-slate-800 transition">Architecture &amp; Migration</button>
+        <button onclick="filterCategory('networking', this)" class="cat-pill px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:text-cyan-300 border border-slate-800 transition">Hub-and-Spoke Network</button>
+        <button onclick="filterCategory('devsecops', this)" class="cat-pill px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:text-cyan-300 border border-slate-800 transition">DevSecOps &amp; IaC</button>
+        <button onclick="filterCategory('governance', this)" class="cat-pill px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:text-cyan-300 border border-slate-800 transition">Governance &amp; FinOps</button>
+        <button onclick="filterCategory('leadership', this)" class="cat-pill px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:text-cyan-300 border border-slate-800 transition">Leadership &amp; RACI</button>
+      </div>
+
+      <!-- 1. PROFESSIONAL PORTFOLIO & STANDING OUT -->
+      <section id="section-1" data-category="leadership" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">01</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Professional Portfolio &amp; Standing Out ("How to Look Unique?")</h2>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-slate-800 text-slate-400 rounded-lg">Career Strategy</span>
+        </div>
+
+        <div class="mt-6 text-slate-300 leading-relaxed space-y-4">
+          <p>
+            In senior and lead-level interviews, candidates are evaluated not just on tool syntax or memorized commands, but on <strong class="text-cyan-400">strategic business understanding, enterprise architecture design, and cross-functional leadership</strong>.
+          </p>
+
+          <!-- Interactive Diagram Box -->
+          <div class="bg-slate-900/90 rounded-2xl p-5 border border-slate-800">
+            <div class="text-xs font-mono text-slate-400 mb-2 flex items-center justify-between">
+              <span><i class="fa-solid fa-sitemap mr-1.5 text-cyan-400"></i> Portfolio Differentiation Architecture</span>
+              <span class="text-slate-500">Mermaid Render</span>
+            </div>
+            <pre class="mermaid text-center">
+flowchart TD
+    A["How to Look Unique?"] --> B["Strategic Portfolio"]
+    B --> C["Freshers: Tool Syntax & Labs"]
+    B --> D["Experienced: Business Impact & Architecture"]
+    D --> E1["1. Resume (Metrics & ROI Driven)"]
+    D --> E2["2. LinkedIn (Thought Leadership & Whitepapers)"]
+    D --> E3["3. Job Portals (Targeted Keyword Density)"]
+    D --> E4["4. GitHub (Production-Grade IaC & Pipelines)"]
+    D --> E5["5. Personal Blog / ADRs & Post-Mortems"]
+
+    classDef highlight fill:#164e63,stroke:#22d3ee,stroke-width:2px,color:#fff;
+    class A,B,D highlight;
+            </pre>
+          </div>
+
+          <!-- Essential Portfolio Assets Grid -->
+          <h3 class="text-base font-semibold text-white pt-4 flex items-center">
+            <i class="fa-solid fa-cubes-stacked text-cyan-400 mr-2"></i> Essential Portfolio Assets for Senior / Lead Architects
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 transition">
+              <div class="flex items-center space-x-2 text-cyan-400 font-semibold text-sm">
+                <i class="fa-solid fa-file-contract"></i>
+                <span>1. Impact &amp; Metrics-Driven Resume</span>
+              </div>
+              <p class="text-xs text-slate-300 mt-2">
+                Replace generic task lists with measurable business ROI and technical scale.
+              </p>
+              <div class="mt-2 p-2.5 bg-black/40 rounded-lg text-xs font-mono text-emerald-300 border border-emerald-900/50">
+                "Architected zero-downtime migration of 100+ enterprise workloads to Azure, cutting operating cloud spend by 28% while achieving 99.99% multi-region SLA."
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 transition">
+              <div class="flex items-center space-x-2 text-blue-400 font-semibold text-sm">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>2. LinkedIn Thought Leadership</span>
+              </div>
+              <p class="text-xs text-slate-300 mt-2">
+                Publish high-level architecture breakdowns, Cloud Adoption Framework (CAF) lessons, disaster recovery runbooks, and participate actively in senior peer discussions.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 transition">
+              <div class="flex items-center space-x-2 text-purple-400 font-semibold text-sm">
+                <i class="fa-brands fa-github"></i>
+                <span>3. Production-Grade GitHub Repositories</span>
+              </div>
+              <p class="text-xs text-slate-300 mt-2">
+                Provide modular, enterprise-ready Terraform modules with strict semantic versioning, Checkov security linting, Infracost automation, and reusable Azure DevOps YAML pipeline templates.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 transition">
+              <div class="flex items-center space-x-2 text-amber-400 font-semibold text-sm">
+                <i class="fa-solid fa-newspaper"></i>
+                <span>4. Architectural Decision Records (ADRs) &amp; Blog</span>
+              </div>
+              <p class="text-xs text-slate-300 mt-2">
+                Document rationale behind trade-offs (e.g. Azure Firewall vs NVAs, AKS vs Container Apps, ExpressRoute vs Site-to-Site VPN) and real production post-mortems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. IT CAREER TRACKS & ROLES MATRIX -->
+      <section id="section-2" data-category="leadership" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">02</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">IT Career Tracks &amp; Roles Matrix</h2>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-slate-800 text-slate-400 rounded-lg">Organizational Alignment</span>
+        </div>
+
+        <div class="mt-6 space-y-5 text-slate-300">
+          <p>
+            Enterprise cloud transformation involves distinct roles collaborating across commercial, techno-functional, strategic, and tactical boundaries. Understanding how these roles interlock is key for senior leadership interviews.
+          </p>
+
+          <!-- Interactive Roles Pipeline -->
+          <div class="bg-slate-900/90 rounded-2xl p-5 border border-slate-800 overflow-x-auto">
+            <div class="min-w-[650px] flex items-center justify-between gap-3 text-center">
+              <div class="flex-1 p-3.5 rounded-xl bg-slate-800/80 border border-slate-700">
+                <div class="text-xs uppercase font-mono text-slate-400">Step 01</div>
+                <div class="text-base font-bold text-white mt-1">Sales</div>
+                <div class="text-[11px] text-cyan-400 mt-1">Commercial Focus</div>
+                <div class="text-[11px] text-slate-400 mt-2">Lead generation, account relationship, deal origination.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right text-slate-600 text-sm"></i>
+
+              <div class="flex-1 p-3.5 rounded-xl bg-slate-800/80 border border-slate-700">
+                <div class="text-xs uppercase font-mono text-slate-400">Step 02</div>
+                <div class="text-base font-bold text-cyan-300 mt-1">Pre-Sales</div>
+                <div class="text-[11px] text-cyan-400 mt-1">Techno-Functional</div>
+                <div class="text-[11px] text-slate-400 mt-2">RFP/RFI response, solution estimation, POC demos.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right text-slate-600 text-sm"></i>
+
+              <div class="flex-1 p-3.5 rounded-xl bg-slate-800/80 border border-slate-700">
+                <div class="text-xs uppercase font-mono text-slate-400">Step 03</div>
+                <div class="text-base font-bold text-blue-400 mt-1">TAM</div>
+                <div class="text-[11px] text-blue-300 mt-1">Tech Account Manager</div>
+                <div class="text-[11px] text-slate-400 mt-2">Trusted technical advisor, SLA governance, escalation handling.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right text-slate-600 text-sm"></i>
+
+              <div class="flex-1 p-3.5 rounded-xl bg-cyan-950/40 border border-cyan-700">
+                <div class="text-xs uppercase font-mono text-cyan-400">Step 04</div>
+                <div class="text-base font-bold text-cyan-300 mt-1">Enterprise Architect</div>
+                <div class="text-[11px] text-emerald-400 mt-1">Infra + App Strategy</div>
+                <div class="text-[11px] text-slate-300 mt-2">Holistic blueprints: security, identity, data &amp; multi-cloud.</div>
+              </div>
+              <i class="fa-solid fa-arrow-right text-slate-600 text-sm"></i>
+
+              <div class="flex-1 p-3.5 rounded-xl bg-slate-800/80 border border-slate-700">
+                <div class="text-xs uppercase font-mono text-slate-400">Step 05</div>
+                <div class="text-base font-bold text-emerald-400 mt-1">Technical Lead</div>
+                <div class="text-[11px] text-emerald-300 mt-1">Execution &amp; Delivery</div>
+                <div class="text-[11px] text-slate-400 mt-2">Hands-on sprint delivery, IaC code reviews, pipeline enforcement.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. THE SENIOR MINDSET: BUSINESS & ARCHITECTURE ALIGNMENT -->
+      <section id="section-3" data-category="leadership" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">03</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">The Senior Mindset: Business &amp; Architecture Alignment</h2>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-slate-800 text-slate-400 rounded-lg">Leadership Competency</span>
+        </div>
+
+        <div class="mt-6 space-y-6 text-slate-300">
+          <div class="p-4 bg-gradient-to-r from-blue-950/40 via-cyan-950/30 to-transparent border-l-4 border-cyan-400 rounded-r-xl">
+            <div class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">The Core Senior Question</div>
+            <p class="text-lg font-bold text-white mt-1">
+              "What is the business? What is the functional domain? What are the SLA, RTO, and compliance constraints before writing a single line of Terraform?"
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Infra Architecture -->
+            <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3">
+              <h3 class="text-sm font-bold text-cyan-300 flex items-center uppercase tracking-wider font-mono">
+                <i class="fa-solid fa-server mr-2 text-cyan-400"></i> Infrastructure Design &amp; Implementation
+              </h3>
+              <ul class="text-xs space-y-2 text-slate-300">
+                <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i> Cloud Architecture &amp; Landing Zones (Hub-and-Spoke, CAF)</li>
+                <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i> DevSecOps &amp; Infrastructure as Code (Terraform modules, CI/CD)</li>
+                <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i> Large-scale Cloud Migration &amp; Workload Modernization</li>
+                <li class="flex items-start"><i class="fa-solid fa-check text-emerald-400 mt-0.5 mr-2"></i> Cloud Governance, Security Baselines, DR &amp; FinOps tracking</li>
+              </ul>
+            </div>
+
+            <!-- Application Architecture -->
+            <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3">
+              <h3 class="text-sm font-bold text-blue-300 flex items-center uppercase tracking-wider font-mono">
+                <i class="fa-solid fa-cubes mr-2 text-blue-400"></i> Application System Design &amp; Architecture
+              </h3>
+              <ul class="text-xs space-y-2 text-slate-300">
+                <li class="flex items-start"><i class="fa-solid fa-check text-cyan-400 mt-0.5 mr-2"></i> Microservices vs Monolith trade-off evaluations</li>
+                <li class="flex items-start"><i class="fa-solid fa-check text-cyan-400 mt-0.5 mr-2"></i> API Gateways, Ingress Controllers &amp; Service Mesh (Istio / Envoy)</li>
+                <li class="flex items-start"><i class="fa-solid fa-check text-cyan-400 mt-0.5 mr-2"></i> Distributed State, Session Persistence &amp; Caching (Redis)</li>
+                <li class="flex items-start"><i class="fa-solid fa-check text-cyan-400 mt-0.5 mr-2"></i> Asynchronous Messaging &amp; Event-Driven Architecture (Service Bus / Event Hub)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Executive Responsibilities -->
+          <div class="bg-slate-900/90 rounded-2xl p-5 border border-slate-800">
+            <h3 class="text-sm font-bold text-white uppercase font-mono tracking-wider mb-4 flex items-center">
+              <i class="fa-solid fa-user-tie text-amber-400 mr-2"></i> Executive &amp; People Leadership Pillars
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+              <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                <div class="font-bold text-cyan-300">Leadership &amp; Mentoring</div>
+                <p class="text-slate-400 mt-1">Driving KT sessions, architecting career roadmaps, running technical interview panels.</p>
+              </div>
+              <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                <div class="font-bold text-blue-300">Vendor Management</div>
+                <p class="text-slate-400 mt-1">Negotiating Statement of Work (SOW), deliverable sign-offs, SLA and RACI tracking.</p>
+              </div>
+              <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                <div class="font-bold text-emerald-300">Pre-Sales &amp; Proposals</div>
+                <p class="text-slate-400 mt-1">Estimating architectural effort, executing high-stakes POCs, answering complex RFPs.</p>
+              </div>
+              <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                <div class="font-bold text-purple-300">Delivery Governance</div>
+                <p class="text-slate-400 mt-1">Enforcing SOPs, blameless post-mortems, architectural compliance reviews.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. REAL-WORLD ARCHITECTURE SCENARIO: 100+ APP MIGRATION & 10 PILLARS -->
+      <section id="section-4" data-category="architecture" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800 glow-cyan">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">04</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Real-World Architecture Scenario: 100+ Application Migration</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">Datacenter to Microsoft Azure Cloud Transformation</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-emerald-950 text-emerald-400 rounded-lg border border-emerald-800">Flagship Case</span>
+        </div>
+
+        <div class="mt-6 space-y-6 text-slate-300">
+          <div class="p-4 bg-slate-900/80 rounded-2xl border border-slate-800 flex items-start space-x-3">
+            <i class="fa-solid fa-circle-exclamation text-cyan-400 text-lg mt-0.5"></i>
+            <div>
+              <span class="text-xs font-mono font-bold text-cyan-300 uppercase tracking-wider">Enterprise Problem Statement</span>
+              <p class="text-sm text-slate-200 mt-1 leading-relaxed">
+                Migrating <strong>100+ complex multi-tier enterprise workloads</strong> (Web, Application APIs, Relational &amp; NoSQL Databases, Batch Processing) across Development, UAT, and Production environments from an aging on-premises datacenter to Microsoft Azure with <strong>zero unplanned downtime</strong>, full compliance, and immediate cost governance.
+              </p>
+            </div>
+          </div>
+
+          <!-- 10 Scalability & Quality Pillars Grid -->
+          <div>
+            <h3 class="text-sm font-bold text-white uppercase tracking-wider font-mono mb-3 flex items-center">
+              <i class="fa-solid fa-gem text-cyan-400 mr-2"></i> The 10 Scalability &amp; Quality Architecture Pillars
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+              <div class="p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/60 transition group">
+                <div class="text-cyan-400 text-lg group-hover:scale-110 transition-transform"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></div>
+                <div class="font-bold text-white text-xs mt-2">1. Scalable</div>
+                <div class="text-[11px] text-slate-400 mt-1">VMSS, Horizontal Pod Autoscaling (HPA), Elastic App Services.</div>
+              </div>
+
+              <div class="p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/60 transition group">
+                <div class="text-blue-400 text-lg group-hover:scale-110 transition-transform"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="font-bold text-white text-xs mt-2">2. Robust</div>
+                <div class="text-[11px] text-slate-400 mt-1">Graceful degradation, circuit breakers, self-healing nodes.</div>
+              </div>
+
+              <div class="p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/60 transition group">
+                <div class="text-emerald-400 text-lg group-hover:scale-110 transition-transform"><i class="fa-solid fa-lock"></i></div>
+                <div class="font-bold text-white text-xs mt-2">3. Secure</div>
+                <div class="text-[11px] text-slate-400 mt-1">Zero-Trust, PIM, CMK disk encryption, Private Endpoints.</div>
+              </div>
+
+              <div class="p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/60 transition group">
+                <div class="text-amber-400 text-lg group-hover:scale-110 transition-transform"><i class="fa-solid fa-server"></i></div>
+                <div class="font-bold text-white text-xs mt-2">4. Reliable</div>
+                <div class="text-[11px] text-slate-400 mt-1">Health probes, SLA-backed managed PaaS, automated failovers.</div>
+              </div>
+
+              <div class="p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/60 transition group">
+                <div class="text-purple-400 text-lg group-hover:scale-110 transition-transform"><i class="fa-solid fa-box-open"></i></div>
+                <div class="font-bold text-white text-xs mt-2">5. Portable</div>
+                <div class="text-[11px] text-slate-400 mt-1">Docker OCI images, Helm packaging, cloud-agnostic Terraform.</div>
+              </div>
+
+              <div class="p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/60 transition group">
+                <div class="text-indigo-400 text-lg group-hover:scale-110 transition-transform"><i class="fa-solid fa-gavel"></i></div>
+                <div class="font-bold text-white text-xs mt-2">6. Governed</div>
+                <div class="text-[11px] text-slate-400 mt-1">Azure Policy Deny effects, Management Groups, Tagging taxonomy.</div>
+              </div>
+
+              <div class="p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/60 transition group">
+                <div class="text-rose-400 text-lg group-hover:scale-110 transition-transform"><i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+                <div class="font-bold text-white text-xs mt-2">7. High Avail</div>
+                <div class="text-[11px] text-slate-400 mt-1">Multi-AZ deployments, ZRS storage, active-active Front Door.</div>
+              </div>
+
+              <div class="p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/60 transition group">
+                <div class="text-emerald-400 text-lg group-hover:scale-110 transition-transform"><i class="fa-solid fa-coins"></i></div>
+                <div class="font-bold text-white text-xs mt-2">8. Cost-Optim</div>
+                <div class="text-[11px] text-slate-400 mt-1">Infracost in PRs, 3-yr RIs, Savings Plans, auto-stop schedules.</div>
+              </div>
+
+              <div class="p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/60 transition group">
+                <div class="text-cyan-300 text-lg group-hover:scale-110 transition-transform"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <div class="font-bold text-white text-xs mt-2">9. Backed Up</div>
+                <div class="text-[11px] text-slate-400 mt-1">Azure Backup vaults, immutable storage, point-in-time restore.</div>
+              </div>
+
+              <div class="p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 hover:border-cyan-500/60 transition group">
+                <div class="text-teal-400 text-lg group-hover:scale-110 transition-transform"><i class="fa-solid fa-chart-line"></i></div>
+                <div class="font-bold text-white text-xs mt-2">10. Monitored</div>
+                <div class="text-[11px] text-slate-400 mt-1">Azure Monitor Agent, DCR filtering, Log Analytics, Action Groups.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ENTERPRISE GOVERNANCE, IDENTITY & MANAGEMENT HIERARCHY -->
+      <section id="section-5" data-category="governance" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">05</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Enterprise Governance, Identity &amp; Management Hierarchy</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">Microsoft Cloud Adoption Framework (CAF) Landing Zone</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-slate-800 text-slate-400 rounded-lg">Landing Zones</span>
+        </div>
+
+        <div class="mt-6 space-y-6 text-slate-300">
+          <!-- CAF Phases Timeline -->
+          <div class="p-4 bg-slate-900/70 rounded-2xl border border-slate-800">
+            <div class="text-xs font-mono font-bold text-cyan-400 uppercase tracking-wider mb-3">
+              <i class="fa-solid fa-arrows-spin mr-1.5"></i> Microsoft CAF 6-Phase Lifecycle
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-center text-xs">
+              <div class="p-2.5 bg-slate-800/80 rounded-lg border border-slate-700">
+                <span class="font-bold text-white">1. Strategy</span>
+                <p class="text-[10px] text-slate-400 mt-1">ROI &amp; justification</p>
+              </div>
+              <div class="p-2.5 bg-slate-800/80 rounded-lg border border-slate-700">
+                <span class="font-bold text-white">2. Plan</span>
+                <p class="text-[10px] text-slate-400 mt-1">Workloads &amp; skills</p>
+              </div>
+              <div class="p-2.5 bg-slate-800/80 rounded-lg border border-slate-700">
+                <span class="font-bold text-white">3. Ready</span>
+                <p class="text-[10px] text-slate-400 mt-1">Landing zone foundation</p>
+              </div>
+              <div class="p-2.5 bg-slate-800/80 rounded-lg border border-slate-700">
+                <span class="font-bold text-white">4. Adopt</span>
+                <p class="text-[10px] text-slate-400 mt-1">Migration &amp; innovate</p>
+              </div>
+              <div class="p-2.5 bg-slate-800/80 rounded-lg border border-slate-700">
+                <span class="font-bold text-white">5. Govern</span>
+                <p class="text-[10px] text-slate-400 mt-1">Policy &amp; guardrails</p>
+              </div>
+              <div class="p-2.5 bg-slate-800/80 rounded-lg border border-slate-700">
+                <span class="font-bold text-white">6. Manage</span>
+                <p class="text-[10px] text-slate-400 mt-1">Ops &amp; protection</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mermaid Tenant & Management Group Hierarchy -->
+          <div class="bg-slate-900/90 rounded-2xl p-5 border border-slate-800">
+            <div class="text-xs font-mono text-slate-400 mb-2 flex items-center justify-between">
+              <span><i class="fa-solid fa-folder-tree mr-1.5 text-cyan-400"></i> Tenant &amp; Management Group Hierarchy</span>
+              <span class="text-slate-500">Azure Enterprise Scaffold</span>
+            </div>
+            <pre class="mermaid text-center">
+graph TD
+    Tenant["Microsoft Entra ID Tenant"] --> Root["Tenant Root Group"]
+    Root --> Platform["Platform Management Group"]
+    Root --> LandingZones["Landing Zones (Workloads)"]
+    Root --> Sandbox["Sandbox / Decommissioned"]
+
+    Platform --> P_Id["Identity MG (AD/DNS)"]
+    Platform --> P_Mg["Management MG (Logs/Mon)"]
+    Platform --> P_Conn["Connectivity MG (Hub/Firewall)"]
+
+    LandingZones --> LZ_Corp["Corp MG (Internal Only)"]
+    LandingZones --> LZ_Online["Online MG (Public/DMZ)"]
+
+    LZ_Corp --> Sub_Dev["Dev Subscriptions"]
+    LZ_Corp --> Sub_UAT["UAT Subscriptions"]
+    LZ_Corp --> Sub_Prod["Prod Subscriptions"]
+
+    classDef rootStyle fill:#004c87,stroke:#38bdf8,stroke-width:2px,color:#fff;
+    classDef lzStyle fill:#064e3b,stroke:#34d399,stroke-width:2px,color:#fff;
+    class Tenant,Root rootStyle;
+    class LandingZones,Sub_Dev,Sub_UAT,Sub_Prod lzStyle;
+            </pre>
+          </div>
+
+          <!-- Best Practice Bullet Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-cyan-300 flex items-center">
+                <i class="fa-solid fa-layer-group mr-2 text-cyan-400"></i> Subscription Boundaries
+              </div>
+              <p class="text-slate-400 mt-2">
+                Separate subscriptions by environment (Dev, UAT, Prod) and function (Platform vs Application) to prevent noisy neighbor bottlenecks and drastically minimize blast radius.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-blue-300 flex items-center">
+                <i class="fa-solid fa-gavel mr-2 text-blue-400"></i> Azure Policy &amp; Initiatives
+              </div>
+              <p class="text-slate-400 mt-2">
+                Assign CIS Azure Benchmark &amp; Microsoft Cloud Security Benchmark (MCSB) at Management Group roots. Enforce Deny effects with strictly auditable, time-bound policy exemptions.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-emerald-300 flex items-center">
+                <i class="fa-solid fa-user-shield mr-2 text-emerald-400"></i> RBAC &amp; PIM Integration
+              </div>
+              <p class="text-slate-400 mt-2">
+                Group-based RBAC synchronized with Microsoft Entra ID. Zero standing administrator access: enforce Privileged Identity Management (PIM) with Just-In-Time (JIT) multi-stage approvals.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. ENTERPRISE HUB-AND-SPOKE NETWORKING ARCHITECTURE -->
+      <section id="section-6" data-category="networking" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800 glow-azure">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">06</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Enterprise Hub-and-Spoke Networking Architecture</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">High-Security Inspection, Routing &amp; Zero-Trust Topology</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-blue-950 text-blue-400 rounded-lg border border-blue-800">Networking Core</span>
+        </div>
+
+        <div class="mt-6 space-y-6 text-slate-300">
+          <!-- Architecture Diagram -->
+          <div class="bg-slate-900/90 rounded-2xl p-5 border border-slate-800">
+            <div class="text-xs font-mono text-slate-400 mb-2 flex items-center justify-between">
+              <span><i class="fa-solid fa-network-wired mr-1.5 text-cyan-400"></i> Hub-and-Spoke Topology &amp; Traffic Inspection</span>
+              <span class="text-slate-500">Live Architecture Model</span>
+            </div>
+            <pre class="mermaid text-center">
+flowchart TD
+    OnPrem["On-Premises Datacenter<br/>(10.0.0.0/16)"] -- ExpressRoute / S2S VPN --> HubVNet
+
+    subgraph HubVNet["HUB VNet (Central Connectivity - 10.100.0.0/16)"]
+        Firewall["Azure Firewall Premium / NVA<br/>(10.100.1.4 - Central Inspection)"]
+        GW["GatewaySubnet<br/>(VPN / ExpressRoute GW)"]
+        DNS["Private DNS Resolver Zones<br/>(privatelink.azure.com)"]
+        GW --> Firewall
+    end
+
+    Firewall -- VNet Peering + UDR: 0.0.0.0/0 --> Spoke1
+    Firewall -- VNet Peering + UDR: 0.0.0.0/0 --> Spoke2
+
+    subgraph Spoke1["Spoke 1: Application VNet (10.101.0.0/16)"]
+        AppSubnet["App Tier Subnet (NSG + ASG)"]
+        DBSubnet["Database Tier Subnet"]
+        PEp["Private Endpoints (SQL, KV, Blob)"]
+        AppSubnet --> PEp
+    end
+
+    subgraph Spoke2["Spoke 2: Shared Services VNet (10.102.0.0/16)"]
+        Runners["Self-Hosted CI/CD Runners"]
+        Bastion["Azure Bastion Host"]
+        SecTools["Vulnerability & Security Scanners"]
+    end
+
+    classDef hubStyle fill:#1e1e38,stroke:#6366f1,stroke-width:2px,color:#fff;
+    classDef spokeStyle fill:#0f291e,stroke:#10b981,stroke-width:1.5px,color:#fff;
+    class HubVNet hubStyle;
+    class Spoke1,Spoke2 spokeStyle;
+            </pre>
+          </div>
+
+          <!-- Technical Elements Breakdown -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+              <div class="font-bold text-cyan-300 text-xs uppercase font-mono flex items-center">
+                <i class="fa-solid fa-map-location-dot mr-2 text-cyan-400"></i> 1. IP Address Management (IPAM) &amp; CIDRs
+              </div>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Comprehensive on-premise CIDR assessment to guarantee non-overlapping RFC 1918 address space. Dedicated supernets allocated for Hub (<code class="text-cyan-300">10.100.0.0/16</code>), Workload Spoke 1 (<code class="text-cyan-300">10.101.0.0/16</code>), and Shared Tools Spoke 2 (<code class="text-cyan-300">10.102.0.0/16</code>).
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+              <div class="font-bold text-blue-300 text-xs uppercase font-mono flex items-center">
+                <i class="fa-solid fa-filter mr-2 text-blue-400"></i> 2. Centralized Traffic Inspection (UDRs)
+              </div>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                User-Defined Routes (UDRs) associated with spoke subnets override default Azure routing: <code class="text-blue-300">0.0.0.0/0 &rarr; Azure Firewall Private IP (10.100.1.4)</code>. Spoke-to-spoke and egress traffic undergoes Deep Packet Inspection (DPI) and TLS termination.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+              <div class="font-bold text-emerald-300 text-xs uppercase font-mono flex items-center">
+                <i class="fa-solid fa-shield-virus mr-2 text-emerald-400"></i> 3. Ingress &amp; Egress Edge Security
+              </div>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Centralized egress filtering prevents data exfiltration. Ingress public web traffic terminates at Azure Application Gateway or Azure Front Door with Web Application Firewall (WAF) enabled in OWASP CRS 3.2 prevention mode before reaching private spokes.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+              <div class="font-bold text-purple-300 text-xs uppercase font-mono flex items-center">
+                <i class="fa-solid fa-lock mr-2 text-purple-400"></i> 4. Private Connectivity (Private Link)
+              </div>
+              <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                Zero public IP addresses on enterprise databases or storage. PaaS services (Key Vault, Azure SQL, Blob Storage) connect solely via Private Endpoints with centralized Private DNS Zones linked across all VNets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. MULTI-LAYERED DEFENSE-IN-DEPTH SECURITY -->
+      <section id="section-7" data-category="devsecops" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">07</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Multi-Layered Defense-in-Depth Security</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">Zero-Trust Controls Across Every Architectural Plane</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-emerald-950 text-emerald-400 rounded-lg border border-emerald-800">Security Guardrails</span>
+        </div>
+
+        <div class="mt-6 space-y-4">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-slate-300 border-collapse">
+              <thead>
+                <tr class="bg-slate-900 text-cyan-400 font-mono uppercase border-b border-slate-700">
+                  <th class="p-3">Architecture Layer</th>
+                  <th class="p-3">Key Controls &amp; Enforcement</th>
+                  <th class="p-3">Technologies &amp; Protocols</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800">
+                <tr class="hover:bg-slate-900/50 transition">
+                  <td class="p-3 font-bold text-white flex items-center">
+                    <i class="fa-solid fa-id-card-clip text-cyan-400 mr-2"></i> Identity Level
+                  </td>
+                  <td class="p-3">
+                    Zero standing privileges, continuous authentication evaluation, device compliance checks, automated credential rotation.
+                  </td>
+                  <td class="p-3 font-mono text-cyan-300">
+                    Microsoft Entra ID, Conditional Access, MFA, PIM (JIT Approvals), Managed Identities (System &amp; User Assigned).
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-slate-900/50 transition">
+                  <td class="p-3 font-bold text-white flex items-center">
+                    <i class="fa-solid fa-network-wired text-blue-400 mr-2"></i> Networking Level
+                  </td>
+                  <td class="p-3">
+                    Micro-segmentation, zero default outbound internet, east-west traffic inspection, DDoS mitigation layer 3/4/7.
+                  </td>
+                  <td class="p-3 font-mono text-blue-300">
+                    Hub-and-Spoke, NSGs/ASGs, Azure Firewall Premium with IDPS, Private Endpoints, Azure DDoS Network Protection.
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-slate-900/50 transition">
+                  <td class="p-3 font-bold text-white flex items-center">
+                    <i class="fa-solid fa-scale-balanced text-emerald-400 mr-2"></i> Governance Level
+                  </td>
+                  <td class="p-3">
+                    Continuous automated compliance auditing, guardrail enforcement preventing non-compliant SKU/region deployments.
+                  </td>
+                  <td class="p-3 font-mono text-emerald-300">
+                    Azure Policy Deny/Audit Initiatives, CIS Azure Benchmark, ISO 27001, Microsoft Defender for Cloud Secure Score.
+                  </td>
+                </tr>
+
+                <tr class="hover:bg-slate-900/50 transition">
+                  <td class="p-3 font-bold text-white flex items-center">
+                    <i class="fa-solid fa-microchip text-purple-400 mr-2"></i> Compute Level
+                  </td>
+                  <td class="p-3">
+                    Automated OS patching, host vulnerability scanning, cryptographic key protection, disk encryption at rest and in transit.
+                  </td>
+                  <td class="p-3 font-mono text-purple-300">
+                    Defender for Servers (EDR), Qualys integration, Customer Managed Keys (CMK) via Key Vault, Azure Update Manager.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. TERRAFORM LANDING ZONE AUTOMATION & BEST PRACTICES -->
+      <section id="section-8" data-category="devsecops" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800 glow-cyan">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">08</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Terraform Landing Zone Automation &amp; Best Practices</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">Automated GitOps, State Locking &amp; Shift-Left Security Pipeline</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-slate-800 text-cyan-400 rounded-lg">IaC Pipeline</span>
+        </div>
+
+        <div class="mt-6 space-y-6 text-slate-300">
+          <!-- Flow of Terraform Pipeline -->
+          <div class="bg-slate-900/90 rounded-2xl p-5 border border-slate-800">
+            <div class="text-xs font-mono text-slate-400 mb-2 flex items-center justify-between">
+              <span><i class="fa-solid fa-code-branch mr-1.5 text-cyan-400"></i> Automated Terraform Quality &amp; Deployment Gate</span>
+              <span class="text-slate-500">Pipeline Stages</span>
+            </div>
+            <pre class="mermaid text-center">
+flowchart LR
+    Repo["Git Repo<br/>(feature/*)"] --> Lint["1. Lint & Format<br/>(tflint, terraform fmt)"]
+    Lint --> Sec["2. Security Scan<br/>(tfsec / Checkov / Trivy)"]
+    Sec --> Cost["3. FinOps Cost Estimator<br/>(Infracost diff)"]
+    Cost --> Plan["4. Terraform Plan<br/>(& Drift Detection)"]
+    Plan --> Approval{"5. Production Gate<br/>(2x Senior Peer Approval)"}
+    Approval -- Approved --> Apply["6. Terraform Apply<br/>(Remote State Locked via Blob)"]
+
+    classDef stageStyle fill:#1e293b,stroke:#06b6d4,stroke-width:1.5px,color:#fff;
+    classDef gateStyle fill:#831843,stroke:#f43f5e,stroke-width:2px,color:#fff;
+    class Repo,Lint,Sec,Cost,Plan,Apply stageStyle;
+    class Approval gateStyle;
+            </pre>
+          </div>
+
+          <!-- Key Best Practice Deep Dives -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-cyan-300 flex items-center font-mono">
+                <i class="fa-solid fa-database mr-2 text-cyan-400"></i> Remote State Management
+              </div>
+              <p class="text-slate-400 mt-2 leading-relaxed">
+                Stored in private, firewall-restricted Azure Blob Storage with automated blob lease locking to prevent race conditions. Access exclusively through Azure Managed Identity; local state or shared credentials strictly prohibited.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-blue-300 flex items-center font-mono">
+                <i class="fa-solid fa-boxes-packing mr-2 text-blue-400"></i> Modularity &amp; Semantic Versioning
+              </div>
+              <p class="text-slate-400 mt-2 leading-relaxed">
+                Parameterized, independent Terraform modules (Networking, Compute, Storage, Monitoring). Workspaces or root modules pin exact Git tags (e.g., <code class="text-blue-300">source = "git::...?ref=v2.4.1"</code>) to guarantee deterministic builds.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-emerald-300 flex items-center font-mono">
+                <i class="fa-solid fa-radar mr-2 text-emerald-400"></i> Automated Nightly Drift Detection
+              </div>
+              <p class="text-slate-400 mt-2 leading-relaxed">
+                Nightly cron pipeline executes <code class="text-emerald-300">terraform plan -detailed-exitcode</code>. Exit code 2 triggers an immediate Teams / Slack alert, isolating unauthorized console changes before they cause production outages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. AZURE REPOS & DEVSECOPS PIPELINES -->
+      <section id="section-9" data-category="devsecops" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">09</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Azure Repos &amp; DevSecOps Pipelines</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">Trunk-Based Governance &amp; Multi-Stage YAML Workflows</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-slate-800 text-slate-400 rounded-lg">CI/CD Standards</span>
+        </div>
+
+        <div class="mt-6 space-y-5 text-slate-300">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Branching Strategy -->
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-3">
+              <div class="text-xs font-mono font-bold text-cyan-300 uppercase flex items-center">
+                <i class="fa-solid fa-code-fork mr-2 text-cyan-400"></i> Trunk-Based Branching Model
+              </div>
+              <p class="text-xs text-slate-400">
+                Developers create short-lived branches (<code class="text-cyan-300">feature/*</code>, <code class="text-cyan-300">fix/*</code>) merging directly into <code class="text-cyan-300">main</code> via Pull Request. Eliminates long-lived branch divergence and complex merge debt.
+              </p>
+              <div class="text-xs font-mono text-slate-400 space-y-1 pt-1">
+                <div class="flex items-center"><i class="fa-solid fa-lock text-emerald-400 mr-2 text-[10px]"></i> Strict Branch Protection on main</div>
+                <div class="flex items-center"><i class="fa-solid fa-user-check text-emerald-400 mr-2 text-[10px]"></i> Min 2 Senior Reviewers + CODEOWNERS</div>
+                <div class="flex items-center"><i class="fa-solid fa-ban text-rose-400 mr-2 text-[10px]"></i> "No Direct Push" &amp; "No Branch Deletion"</div>
+              </div>
+            </div>
+
+            <!-- YAML Pipeline Stages -->
+            <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-3">
+              <div class="text-xs font-mono font-bold text-blue-300 uppercase flex items-center">
+                <i class="fa-solid fa-diagram-next mr-2 text-blue-400"></i> YAML Template Flow Stages
+              </div>
+              <div class="text-xs space-y-2 text-slate-300 font-mono">
+                <div class="p-2 bg-slate-800/80 rounded border border-slate-700 flex justify-between">
+                  <span>1. Validate &amp; Test</span>
+                  <span class="text-cyan-400 text-[10px]">terraform fmt/validate</span>
+                </div>
+                <div class="p-2 bg-slate-800/80 rounded border border-slate-700 flex justify-between">
+                  <span>2. Security &amp; Secrets</span>
+                  <span class="text-emerald-400 text-[10px]">GitLeaks + Checkov + Trivy</span>
+                </div>
+                <div class="p-2 bg-slate-800/80 rounded border border-slate-700 flex justify-between">
+                  <span>3. Build &amp; Plan</span>
+                  <span class="text-blue-400 text-[10px]">Artifact published</span>
+                </div>
+                <div class="p-2 bg-slate-800/80 rounded border border-slate-700 flex justify-between">
+                  <span>4. Production Gate</span>
+                  <span class="text-amber-400 text-[10px]">Manual approval required</span>
+                </div>
+                <div class="p-2 bg-slate-800/80 rounded border border-slate-700 flex justify-between">
+                  <span>5. Automated Rollback</span>
+                  <span class="text-rose-400 text-[10px]">On failure trigger</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Snippet Viewer -->
+          <div class="bg-black/60 rounded-xl p-4 border border-slate-800 font-mono text-xs">
+            <div class="flex items-center justify-between pb-2 border-b border-slate-800 text-slate-400 mb-2">
+              <span><i class="fa-brands fa-windows text-blue-400 mr-1.5"></i> azure-pipelines-devsecops.yml</span>
+              <button onclick="copyCode('pipelineCode')" class="text-[10px] text-cyan-400 hover:text-cyan-300 flex items-center space-x-1">
+                <i class="fa-regular fa-copy"></i>
+                <span id="copyText">Copy YAML</span>
+              </button>
+            </div>
+            <pre id="pipelineCode" class="text-slate-300 overflow-x-auto leading-relaxed">
+trigger:
+  branches:
+    include: [ main ]
+
+stages:
+  - stage: SecurityScan
+    displayName: 'Shift-Left Security & Lint'
+    jobs:
+      - job: StaticAnalysis
+        pool: { vmImage: 'ubuntu-latest' }
+        steps:
+          - script: gitleaks detect --source . --verbose
+            displayName: 'Secrets Detection (GitLeaks)'
+          - script: checkov -d . --framework terraform --output junitxml --output-file-path $(Common.TestResultsDirectory)/checkov.xml
+            displayName: 'IaC Security Baseline (Checkov)'
+          - script: infracost breakdown --path . --format json --out-file /tmp/infracost.json
+            displayName: 'FinOps Cost Shift-Left (Infracost)'
+
+  - stage: PlanAndApproval
+    displayName: 'Terraform Plan & Gate'
+    jobs:
+      - deployment: PlanGate
+        environment: 'Azure-Production-Env'
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - script: terraform plan -out=tfplan -input=false
+                  displayName: 'Generate Executable Plan Artifact'
+
+  - stage: ApplyDeployment
+    displayName: 'Controlled Apply & Rollback'
+    dependsOn: PlanAndApproval
+    jobs:
+      - job: Apply
+        steps:
+          - script: terraform apply tfplan
+            displayName: 'Execute Infrastructure State Transition'
+            </pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. END-TO-END CLOUD MIGRATION STRATEGY -->
+      <section id="section-10" data-category="architecture" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800 glow-cyan">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">10</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">End-to-End Cloud Migration Strategy</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">5-Stage Structured Factory: Discovery to Hypercare</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-emerald-950 text-emerald-400 rounded-lg border border-emerald-800">Migration Factory</span>
+        </div>
+
+        <div class="mt-6 space-y-6 text-slate-300">
+          <!-- 5 Phases Timeline -->
+          <div class="bg-slate-900/90 rounded-2xl p-5 border border-slate-800">
+            <div class="text-xs font-mono text-slate-400 mb-2 flex items-center justify-between">
+              <span><i class="fa-solid fa-timeline mr-1.5 text-cyan-400"></i> The 5-Phase Migration Execution Roadmap</span>
+              <span class="text-slate-500">Structured Methodology</span>
+            </div>
+            <pre class="mermaid text-center">
+flowchart LR
+    P1["1. Discovery<br/>(Inventory, Dependency Mapping)"] --> P2["2. Assessment<br/>(TCO/ROI, Compatibility)"]
+    P2 --> P3["3. Readiness<br/>(Landing Zone, ExpressRoute)"]
+    P3 --> P4["4. Cutover<br/>(Downtime Window, DNS TTL)"]
+    P4 --> P5["5. Hypercare<br/>(24x7 War Room, Telemetry)"]
+
+    classDef stepStyle fill:#0f172a,stroke:#38bdf8,stroke-width:1.5px,color:#fff;
+    classDef cutStyle fill:#701a75,stroke:#f472b6,stroke-width:2px,color:#fff;
+    class P1,P2,P3,P5 stepStyle;
+    class P4 cutStyle;
+            </pre>
+          </div>
+
+          <!-- Migration Checklists Detail -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-cyan-300 font-mono uppercase flex items-center">
+                <i class="fa-solid fa-clipboard-check mr-2 text-cyan-400"></i> Pre-Migration Checklist
+              </div>
+              <ul class="text-slate-300 mt-2 space-y-1.5 list-disc list-inside">
+                <li>Automated discovery via Azure Migrate appliances.</li>
+                <li>Comprehensive application dependency mapping.</li>
+                <li>Bandwidth sizing &amp; ExpressRoute capacity checks.</li>
+                <li>Landing zone subscription readiness &amp; policy verification.</li>
+                <li>Full bare-metal backup and snapshot before touch.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-rose-300 font-mono uppercase flex items-center">
+                <i class="fa-solid fa-stopwatch mr-2 text-rose-400"></i> Cutover Execution Window
+              </div>
+              <ul class="text-slate-300 mt-2 space-y-1.5 list-disc list-inside">
+                <li>Pre-reduce DNS TTL to 300s 48 hours prior.</li>
+                <li>Stop source transactional writes / put in read-only.</li>
+                <li>Final delta replication synchronization (DB / Storage).</li>
+                <li>Update DNS / reroute traffic to Azure Application Gateway.</li>
+                <li>Automated functional and smoke test verification.</li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-emerald-300 font-mono uppercase flex items-center">
+                <i class="fa-solid fa-headset mr-2 text-emerald-400"></i> Hypercare &amp; War Room
+              </div>
+              <ul class="text-slate-300 mt-2 space-y-1.5 list-disc list-inside">
+                <li>2 to 4 weeks dedicated 24x7 War Room support.</li>
+                <li>Real-time telemetry tracking (latency, 5xx errors).</li>
+                <li>Business stakeholder sign-offs per workload wave.</li>
+                <li>Performance benchmarking against on-premise baseline.</li>
+                <li>Decommissioning on-prem assets after hypercare closure.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. FINOPS (CLOUD FINANCIAL MANAGEMENT) -->
+      <section id="section-11" data-category="governance" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">11</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">FinOps (Cloud Financial Management)</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">28% Realized Cloud Spend Optimization Framework</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-emerald-950 text-emerald-400 rounded-lg border border-emerald-800">-28% Cloud ROI</span>
+        </div>
+
+        <div class="mt-6 space-y-5 text-slate-300">
+          <p>
+            FinOps is not just cutting costs—it is maximizing business value per dollar spent through financial accountability, real-time visibility, and proactive automation.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-cyan-300 font-mono flex items-center">
+                <i class="fa-solid fa-trash-can mr-2 text-rose-400"></i> 1. Waste Elimination
+              </div>
+              <p class="text-slate-400 mt-2">
+                Automated sweeps for unattached Managed Disks, orphaned snapshots, idle compute instances, and unused static public IPs saving up to 10-15% instantly.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-blue-300 font-mono flex items-center">
+                <i class="fa-solid fa-sliders mr-2 text-cyan-400"></i> 2. Rightsizing Strategy
+              </div>
+              <p class="text-slate-400 mt-2">
+                Analyze 30-day CPU/memory utilization percentiles (P95). Downsize over-provisioned VMs and reallocate underutilized database tiers with zero performance impact.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-emerald-300 font-mono flex items-center">
+                <i class="fa-solid fa-file-invoice-dollar mr-2 text-emerald-400"></i> 3. Commitment Discounts
+              </div>
+              <p class="text-slate-400 mt-2">
+                Lock in 1-year or 3-year Reserved Instances (RI) and Azure Savings Plans for steady-state workloads, achieving up to 45% - 72% savings compared to Pay-As-You-Go.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-amber-300 font-mono flex items-center">
+                <i class="fa-solid fa-calendar-xmark mr-2 text-amber-400"></i> 4. Automated Scheduling
+              </div>
+              <p class="text-slate-400 mt-2">
+                Automated start/stop schedules via Azure Automation runbooks for non-production (Dev, Test, UAT) environments outside business hours, saving 65% on test environments.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-purple-300 font-mono flex items-center">
+                <i class="fa-solid fa-filter-circle-dollar mr-2 text-purple-400"></i> 5. Log Ingestion Tuning
+              </div>
+              <p class="text-slate-400 mt-2">
+                Filter noisy telemetry at source via Azure Monitor Agent (AMA) Data Collection Rules (DCR). Exclude high-volume verbose logs to cut Log Analytics ingestion invoices by over 40%.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-900/70 border border-slate-800">
+              <div class="font-bold text-indigo-300 font-mono flex items-center">
+                <i class="fa-solid fa-tags mr-2 text-indigo-400"></i> 6. Mandatory Cost Allocation Tagging
+              </div>
+              <p class="text-slate-400 mt-2">
+                Enforce tags at subscription boundaries via Azure Policy: <code class="text-indigo-300">Environment</code>, <code class="text-indigo-300">CostCenter</code>, <code class="text-indigo-300">Owner</code>, and <code class="text-indigo-300">ApplicationId</code> for 100% cost attribution.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12. BACKUP, DISASTER RECOVERY & HIGH AVAILABILITY -->
+      <section id="section-12" data-category="architecture" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800 glow-azure">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">12</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Backup, Disaster Recovery &amp; High Availability</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">RTO / RPO Guarantees &amp; Multi-Region Failover Architecture</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-blue-950 text-blue-400 rounded-lg border border-blue-800">Business Continuity</span>
+        </div>
+
+        <div class="mt-6 space-y-6 text-slate-300">
+          <!-- RTO vs RPO Metrics Visualizer -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 bg-slate-900/80 rounded-2xl border border-slate-800">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-cyan-400 uppercase">RTO (Recovery Time Objective)</span>
+                <span class="text-xs font-mono bg-cyan-950 text-cyan-300 px-2 py-0.5 rounded border border-cyan-800">&le; 30 Minutes</span>
+              </div>
+              <p class="text-xs text-slate-300 mt-2">
+                The maximum acceptable elapsed wall-clock duration of system downtime before core applications and business services are completely restored.
+              </p>
+            </div>
+
+            <div class="p-4 bg-slate-900/80 rounded-2xl border border-slate-800">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-mono font-bold text-emerald-400 uppercase">RPO (Recovery Point Objective)</span>
+                <span class="text-xs font-mono bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded border border-emerald-800">&le; 15 Minutes</span>
+              </div>
+              <p class="text-xs text-slate-300 mt-2">
+                The maximum acceptable quantum of data loss measured backward in time from an unplanned outage (e.g. maximum 15 minutes of transactional delta).
+              </p>
+            </div>
+          </div>
+
+          <!-- Storage Redundancy Comparison Matrix -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-slate-300 border-collapse">
+              <thead>
+                <tr class="bg-slate-900 text-cyan-400 font-mono uppercase border-b border-slate-700">
+                  <th class="p-3">Redundancy Model</th>
+                  <th class="p-3">Physical Distribution</th>
+                  <th class="p-3">Durability SLA</th>
+                  <th class="p-3">Target Architectural Tier</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800">
+                <tr class="hover:bg-slate-900/50">
+                  <td class="p-3 font-bold text-white">LRS (Locally Redundant)</td>
+                  <td class="p-3">3 synchronous copies within a single physical datacenter</td>
+                  <td class="p-3 font-mono text-cyan-300">99.999999999% (11 9's)</td>
+                  <td class="p-3">Dev/Test workloads, non-critical logs</td>
+                </tr>
+                <tr class="hover:bg-slate-900/50">
+                  <td class="p-3 font-bold text-white">ZRS (Zone-Redundant)</td>
+                  <td class="p-3">3 synchronous copies across 3 distinct Availability Zones</td>
+                  <td class="p-3 font-mono text-emerald-300">99.9999999999% (12 9's)</td>
+                  <td class="p-3">High-Availability Production Workloads</td>
+                </tr>
+                <tr class="hover:bg-slate-900/50">
+                  <td class="p-3 font-bold text-white">GRS / GZRS (Geo-Redundant)</td>
+                  <td class="p-3">Zone-redundant in primary + replicated to secondary paired region</td>
+                  <td class="p-3 font-mono text-purple-300">99.99999999999999% (16 9's)</td>
+                  <td class="p-3">Tier-0 Mission Critical &amp; Disaster Recovery</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="p-4 bg-slate-900/70 rounded-xl border border-slate-800 text-xs text-slate-300">
+            <span class="font-bold text-white font-mono uppercase text-cyan-300"><i class="fa-solid fa-arrows-spin mr-1.5"></i> Multi-Region DR Strategy:</span>
+            Primary active region (e.g., East US) runs Virtual Machine Scale Sets (VMSS) across 3 Availability Zones. Azure Site Recovery (ASR) continuously replicates compute disks asynchronously to the paired secondary region (e.g., West US), ready for automated failover orchestration.
+          </div>
+        </div>
+      </section>
+
+      <!-- 13. ENTERPRISE OBSERVABILITY & MONITORING -->
+      <section id="section-13" data-category="governance" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">13</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Enterprise Observability &amp; Monitoring</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">Unified Telemetry, Azure Monitor Agent &amp; Escalation</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-slate-800 text-slate-400 rounded-lg">Observability</span>
+        </div>
+
+        <div class="mt-6 space-y-4 text-slate-300 text-xs">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 bg-slate-900/70 rounded-xl border border-slate-800">
+              <div class="font-bold text-cyan-300 font-mono flex items-center">
+                <i class="fa-solid fa-box-archive mr-2 text-cyan-400"></i> Centralized Log Analytics
+              </div>
+              <p class="text-slate-400 mt-2">
+                Dedicated Log Analytics Workspace deployed per Enterprise Landing Zone with 90-day interactive retention, archiving automatically to immutable cold Azure Storage for 365-day compliance audits.
+              </p>
+            </div>
+
+            <div class="p-4 bg-slate-900/70 rounded-xl border border-slate-800">
+              <div class="font-bold text-blue-300 font-mono flex items-center">
+                <i class="fa-solid fa-filter mr-2 text-blue-400"></i> Modern AMA &amp; DCR Ingestion
+              </div>
+              <p class="text-slate-400 mt-2">
+                Deprecated legacy MMA agent replaced with Azure Monitor Agent (AMA). Data Collection Rules (DCR) filter high-frequency OS performance counters at source, slashing noise and reducing log ingestion invoices.
+              </p>
+            </div>
+
+            <div class="p-4 bg-slate-900/70 rounded-xl border border-slate-800">
+              <div class="font-bold text-emerald-300 font-mono flex items-center">
+                <i class="fa-solid fa-bell mr-2 text-emerald-400"></i> Dynamic Action Groups &amp; Escalation
+              </div>
+              <p class="text-slate-400 mt-2">
+                Alert rules route dynamically through Azure Monitor Action Groups integrated via secure webhooks with Microsoft Teams, Slack channels, and PagerDuty with strict SLA response tiers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 14. VENDOR MANAGEMENT & DELIVERY GOVERNANCE -->
+      <section id="section-14" data-category="leadership" class="search-section rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800 glow-cyan">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center font-mono font-bold text-sm border border-cyan-800">14</span>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Vendor Management &amp; Delivery Governance</h2>
+              <p class="text-xs text-slate-400 font-mono mt-0.5">Executive Procurement, RACI Matrix &amp; SLA Enforcement</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono px-2.5 py-1 bg-amber-950 text-amber-400 rounded-lg border border-amber-800">Executive Leadership</span>
+        </div>
+
+        <div class="mt-6 space-y-6 text-slate-300">
+          <p>
+            Senior engineers and principal architects regularly evaluate, negotiate with, and govern external system integrators, software vendors, and managed service partners.
+          </p>
+
+          <!-- Procurement Lifecycle Diagram -->
+          <div class="bg-slate-900/90 rounded-2xl p-5 border border-slate-800">
+            <div class="text-xs font-mono text-slate-400 mb-2 flex items-center justify-between">
+              <span><i class="fa-solid fa-handshake mr-1.5 text-cyan-400"></i> The Procurement &amp; Delivery Governance Lifecycle</span>
+              <span class="text-slate-500">6-Stage Protocol</span>
+            </div>
+            <pre class="mermaid text-center">
+flowchart TD
+    RFI["1. Request for Information (RFI)<br/>Market scanning & vendor capabilities"] --> RFP["2. Request for Proposal (RFP)<br/>Detailed scope, architecture & requirements"]
+    RFP --> Matrix["3. Technical Evaluation Matrix<br/>Objective scoring: Architecture (40%), Security (30%), Cost (30%)"]
+    Matrix --> SOW["4. Statement of Work (SOW) & Commercials<br/>Milestones, acceptance criteria, liabilities & SLAs"]
+    SOW --> Sprints["5. Project Sprints & Deliverable Milestones<br/>Sprint demos, IaC code reviews, pipeline adherence"]
+    Sprints --> SignOff["6. Acceptance Criteria Sign-Off & Payment<br/>KT handover, runbooks, shadowing & final warranty"]
+
+    classDef procStyle fill:#1e293b,stroke:#06b6d4,stroke-width:1.5px,color:#fff;
+    classDef finalStyle fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#fff;
+    class RFI,RFP,Matrix,SOW,Sprints procStyle;
+    class SignOff finalStyle;
+            </pre>
+          </div>
+
+          <!-- RACI Matrix Table -->
+          <div>
+            <h3 class="text-sm font-bold text-white uppercase font-mono tracking-wider mb-3 flex items-center">
+              <i class="fa-solid fa-table-list text-cyan-400 mr-2"></i> Cloud Architecture RACI Governance Matrix
+            </h3>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs text-slate-300 border-collapse">
+                <thead>
+                  <tr class="bg-slate-900 text-cyan-400 font-mono uppercase border-b border-slate-700">
+                    <th class="p-3">Program Deliverable / Milestone</th>
+                    <th class="p-3">Enterprise Architect</th>
+                    <th class="p-3">Technical Lead</th>
+                    <th class="p-3">Vendor / SI Partner</th>
+                    <th class="p-3">Security &amp; CISO</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800">
+                  <tr class="hover:bg-slate-900/50">
+                    <td class="p-3 font-semibold text-white">Target Landing Zone Architecture</td>
+                    <td class="p-3 font-bold text-emerald-400">Accountable (A)</td>
+                    <td class="p-3 text-cyan-300">Responsible (R)</td>
+                    <td class="p-3 text-slate-400">Consulted (C)</td>
+                    <td class="p-3 text-amber-300">Consulted (C)</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/50">
+                    <td class="p-3 font-semibold text-white">Terraform Modules &amp; CI/CD Pipelines</td>
+                    <td class="p-3 text-slate-400">Consulted (C)</td>
+                    <td class="p-3 font-bold text-emerald-400">Accountable (A)</td>
+                    <td class="p-3 text-cyan-300">Responsible (R)</td>
+                    <td class="p-3 text-slate-400">Informed (I)</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/50">
+                    <td class="p-3 font-semibold text-white">Zero-Trust &amp; Regulatory Benchmark Sign-off</td>
+                    <td class="p-3 text-cyan-300">Responsible (R)</td>
+                    <td class="p-3 text-slate-400">Consulted (C)</td>
+                    <td class="p-3 text-slate-400">Informed (I)</td>
+                    <td class="p-3 font-bold text-emerald-400">Accountable (A)</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/50">
+                    <td class="p-3 font-semibold text-white">100+ Workload Cutover Execution</td>
+                    <td class="p-3 font-bold text-emerald-400">Accountable (A)</td>
+                    <td class="p-3 text-cyan-300">Responsible (R)</td>
+                    <td class="p-3 text-cyan-300">Responsible (R)</td>
+                    <td class="p-3 text-slate-400">Informed (I)</td>
+                  </tr>
+                  <tr class="hover:bg-slate-900/50">
+                    <td class="p-3 font-semibold text-white">Vendor Milestone Acceptance &amp; Payment Release</td>
+                    <td class="p-3 font-bold text-emerald-400">Accountable (A)</td>
+                    <td class="p-3 text-amber-300">Consulted (C)</td>
+                    <td class="p-3 text-slate-400">Informed (I)</td>
+                    <td class="p-3 text-slate-400">Informed (I)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="mt-2 text-[11px] text-slate-400 flex flex-wrap gap-4 font-mono">
+              <span><strong class="text-emerald-400">R</strong> = Responsible (Executes work)</span>
+              <span><strong class="text-cyan-400">A</strong> = Accountable (Sole decision maker &amp; owner)</span>
+              <span><strong class="text-amber-400">C</strong> = Consulted (Provides two-way input)</span>
+              <span><strong class="text-slate-400">I</strong> = Informed (Kept updated on progress)</span>
+            </div>
+          </div>
+
+          <!-- Transition & KT Best Practices -->
+          <div class="p-4 bg-slate-900/70 rounded-2xl border border-slate-800 text-xs text-slate-300 space-y-2">
+            <div class="font-bold text-white font-mono uppercase text-amber-400 flex items-center">
+              <i class="fa-solid fa-graduation-cap mr-2"></i> Knowledge Transfer &amp; Handover Criteria
+            </div>
+            <p class="text-slate-400 leading-relaxed">
+              Before final invoice sign-off, vendors must deliver: formal architecture decision records (ADRs), comprehensive runbooks with step-by-step incident response procedures, interactive architecture walk-throughs recorded for internal wikis, and 2 weeks of live operational shadowing with internal engineering leads.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE FINOPS ROI ESTIMATOR -->
+      <section class="rounded-3xl glass-panel p-6 sm:p-8 border border-slate-800 glow-emerald no-print">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center space-x-3">
+            <span class="w-8 h-8 rounded-lg bg-emerald-950 text-emerald-400 flex items-center justify-center font-mono font-bold text-sm border border-emerald-800">
+              <i class="fa-solid fa-calculator"></i>
+            </span>
+            <div>
+              <h2 class="text-lg sm:text-xl font-bold text-white">Interactive FinOps Savings Calculator</h2>
+              <p class="text-xs text-slate-400 font-mono">Simulate Enterprise Cloud Optimization for 100+ Workloads</p>
+            </div>
+          </div>
+          <span class="text-xs font-mono text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-lg border border-emerald-800">Live Tool</span>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="space-y-4">
+            <div>
+              <label class="text-xs font-mono text-slate-300 flex justify-between">
+                <span>Monthly Cloud Baseline Spend</span>
+                <span id="spendLabel" class="text-cyan-400 font-bold">$100,000</span>
+              </label>
+              <input type="range" id="spendInput" min="20000" max="500000" step="10000" value="100000" class="w-full mt-2 accent-cyan-400">
+            </div>
+
+            <div>
+              <label class="text-xs font-mono text-slate-300 flex justify-between">
+                <span>Target Workload Count</span>
+                <span id="workloadLabel" class="text-cyan-400 font-bold">100 VMs / DBs</span>
+              </label>
+              <input type="range" id="workloadInput" min="20" max="300" step="10" value="100" class="w-full mt-2 accent-cyan-400">
+            </div>
+
+            <div class="space-y-2 pt-2 text-xs">
+              <label class="flex items-center space-x-2 text-slate-300 cursor-pointer">
+                <input type="checkbox" id="chkWaste" checked class="accent-emerald-500 rounded">
+                <span>Eliminate Orphan Disks &amp; IPs (8% savings)</span>
+              </label>
+              <label class="flex items-center space-x-2 text-slate-300 cursor-pointer">
+                <input type="checkbox" id="chkRight" checked class="accent-emerald-500 rounded">
+                <span>Rightsizing &amp; P95 Optimization (10% savings)</span>
+              </label>
+              <label class="flex items-center space-x-2 text-slate-300 cursor-pointer">
+                <input type="checkbox" id="chkRI" checked class="accent-emerald-500 rounded">
+                <span>3-Year Reserved Instances / Savings Plans (10% savings)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Output Results Box -->
+          <div class="md:col-span-2 p-6 bg-slate-900/90 rounded-2xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-mono uppercase text-slate-400">Projected Financial Impact</div>
+              <div class="grid grid-cols-2 gap-4 mt-4">
+                <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                  <div class="text-xs text-slate-400">Estimated Monthly Savings</div>
+                  <div id="monthlySavings" class="text-2xl font-bold font-mono text-emerald-400 mt-1">$28,000</div>
+                  <div id="percentSavings" class="text-[10px] text-emerald-300 font-mono mt-0.5">28% Total Reduction</div>
+                </div>
+                <div class="p-3 bg-slate-800/60 rounded-xl border border-slate-700">
+                  <div class="text-xs text-slate-400">Estimated Annual Run-Rate ROI</div>
+                  <div id="annualSavings" class="text-2xl font-bold font-mono text-cyan-400 mt-1">$336,000 / yr</div>
+                  <div class="text-[10px] text-cyan-300 font-mono mt-0.5">Freeing capital for modernization</div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+              <span><i class="fa-solid fa-circle-check text-emerald-400 mr-1.5"></i> Validated against 100+ Enterprise Azure Workload migrations</span>
+              <span class="font-mono text-slate-500">FinOps Foundation Standard</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="pt-8 pb-12 border-t border-slate-800 text-center text-xs text-slate-500 space-y-3">
+        <div class="flex items-center justify-center space-x-4 text-slate-400">
+          <a href="mailto:mohd.sadiq84@gmail.com" class="hover:text-cyan-400 transition flex items-center space-x-1">
+            <i class="fa-solid fa-envelope"></i>
+            <span>mohd.sadiq84@gmail.com</span>
+          </a>
+          <span>•</span>
+          <a href="https://github.com/sadiq84" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition flex items-center space-x-1">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <span>•</span>
+          <a href="#hero" class="hover:text-cyan-400 transition">Back to Top</a>
+        </div>
+        <p class="font-mono text-[11px]">
+          Architected &amp; Maintained by <span class="text-cyan-400 font-bold">Sadiq84</span> • Senior DevSecOps &amp; Cloud Architect Interview Dossier
+        </p>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    // 1. Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const bar = document.getElementById('scrollProgressBar');
+      if (bar) bar.style.width = scrolled + '%';
+    });
+
+    // 2. Mobile Drawer Controls
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMobileDrawer = document.getElementById('closeMobileDrawer');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const mobileDrawerBackdrop = document.getElementById('mobileDrawerBackdrop');
+
+    function openDrawer() {
+      if (!mobileDrawer || !mobileDrawerBackdrop) return;
+      mobileDrawerBackdrop.classList.remove('hidden');
+      mobileDrawer.classList.remove('-translate-x-full');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeDrawer() {
+      if (!mobileDrawer || !mobileDrawerBackdrop) return;
+      mobileDrawerBackdrop.classList.add('hidden');
+      mobileDrawer.classList.add('-translate-x-full');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openDrawer);
+    if (closeMobileDrawer) closeMobileDrawer.addEventListener('click', closeDrawer);
+    if (mobileDrawerBackdrop) mobileDrawerBackdrop.addEventListener('click', closeDrawer);
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', closeDrawer);
+    });
+
+    // 3. Category Filter
+    function filterCategory(cat, btn) {
+      document.querySelectorAll('.cat-pill').forEach(p => {
+        p.className = 'cat-pill px-3 py-1.5 rounded-lg bg-slate-900 text-slate-300 hover:text-cyan-300 border border-slate-800 transition';
+      });
+      if (btn) {
+        btn.className = 'cat-pill px-3 py-1.5 rounded-lg bg-cyan-500 text-slate-950 font-bold border border-cyan-400 transition';
+      }
+
+      const sections = document.querySelectorAll('.search-section');
+      sections.forEach(sec => {
+        if (cat === 'all') {
+          sec.style.display = 'block';
+        } else {
+          const secCat = sec.getAttribute('data-category');
+          sec.style.display = (secCat === cat) ? 'block' : 'none';
+        }
+      });
+    }
+
+    // 4. Global Search Filter
+    const searchInput = document.getElementById('globalSearch');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const sections = document.querySelectorAll('.search-section');
+        sections.forEach(sec => {
+          const text = sec.innerText.toLowerCase();
+          sec.style.display = text.includes(query) ? 'block' : 'none';
+        });
+      });
+
+      // Shortcut '/' to focus search
+      window.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement !== searchInput) {
+          e.preventDefault();
+          searchInput.focus();
+        }
+      });
+    }
+
+    // 5. Active ScrollSpy for Desktop Sidebar
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px',
+      threshold: 0
+    };
+
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const observedSections = document.querySelectorAll('section[id]');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          sidebarLinks.forEach(link => {
+            if (link.getAttribute('href') === '#' + id) {
+              link.classList.add('bg-cyan-950/70', 'text-cyan-300', 'font-semibold', 'border-l-2', 'border-cyan-400');
+              link.classList.remove('text-slate-400');
+            } else {
+              link.classList.remove('bg-cyan-950/70', 'text-cyan-300', 'font-semibold', 'border-l-2', 'border-cyan-400');
+              link.classList.add('text-slate-400');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    observedSections.forEach(sec => observer.observe(sec));
+
+    // 6. Copy Code Utility
+    function copyCode(elementId) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      navigator.clipboard.writeText(el.innerText).then(() => {
+        const copyBtn = document.getElementById('copyText');
+        if (copyBtn) {
+          copyBtn.innerText = 'Copied!';
+          setTimeout(() => { copyBtn.innerText = 'Copy YAML'; }, 2000);
+        }
+      });
+    }
+
+    // 7. Interactive FinOps Calculator
+    const spendInput = document.getElementById('spendInput');
+    const workloadInput = document.getElementById('workloadInput');
+    const chkWaste = document.getElementById('chkWaste');
+    const chkRight = document.getElementById('chkRight');
+    const chkRI = document.getElementById('chkRI');
+
+    const spendLabel = document.getElementById('spendLabel');
+    const workloadLabel = document.getElementById('workloadLabel');
+    const monthlySavings = document.getElementById('monthlySavings');
+    const percentSavings = document.getElementById('percentSavings');
+    const annualSavings = document.getElementById('annualSavings');
+
+    function calculateFinOps() {
+      if (!spendInput || !workloadInput) return;
+      const spend = parseFloat(spendInput.value) || 100000;
+      const workloads = parseInt(workloadInput.value) || 100;
+
+      if (spendLabel) spendLabel.innerText = '$' + spend.toLocaleString();
+      if (workloadLabel) workloadLabel.innerText = workloads + ' VMs / DBs';
+
+      let totalPercent = 0;
+      if (chkWaste && chkWaste.checked) totalPercent += 8;
+      if (chkRight && chkRight.checked) totalPercent += 10;
+      if (chkRI && chkRI.checked) totalPercent += 10;
+
+      const monthly = (spend * (totalPercent / 100));
+      const annual = monthly * 12;
+
+      if (monthlySavings) monthlySavings.innerText = '$' + Math.round(monthly).toLocaleString();
+      if (percentSavings) percentSavings.innerText = totalPercent + '% Total Reduction';
+      if (annualSavings) annualSavings.innerText = '$' + Math.round(annual).toLocaleString() + ' / yr';
+    }
+
+    if (spendInput) spendInput.addEventListener('input', calculateFinOps);
+    if (workloadInput) workloadInput.addEventListener('input', calculateFinOps);
+    if (chkWaste) chkWaste.addEventListener('change', calculateFinOps);
+    if (chkRight) chkRight.addEventListener('change', calculateFinOps);
+    if (chkRI) chkRI.addEventListener('change', calculateFinOps);
+    calculateFinOps();
+
+    // 8. Executive Summary / Flashcard Mode
+    let isSummaryMode = false;
+    function toggleQuickFlashcardMode() {
+      isSummaryMode = !isSummaryMode;
+      const btn = document.getElementById('flashcardBtn');
+      if (isSummaryMode) {
+        if (btn) {
+          btn.classList.add('bg-cyan-600', 'text-white');
+          btn.classList.remove('bg-slate-800', 'text-slate-200');
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        if (btn) {
+          btn.classList.remove('bg-cyan-600', 'text-white');
+          btn.classList.add('bg-slate-800', 'text-slate-200');
+        }
+      }
+    }
+  </script>
+</body>
+</html>
