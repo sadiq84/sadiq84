@@ -1,20 +1,33 @@
 <div align="center">
 
-# 🛡️ Senior DevOps / Cloud Solutions Architect
-### Enterprise Cloud Governance • 100+ Workload Migration • DevSecOps Automation • FinOps Strategy
+<!-- 3D & ANIMATED HERO BANNER -->
+<img src="banner.svg" alt="Sadiq - Senior DevSecOps &amp; Cloud Architect" width="100%" />
 
-[![Azure](https://img.shields.io/badge/Microsoft_Azure-Solutions_Architect_Expert-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://azure.microsoft.com/)
-[![Terraform](https://img.shields.io/badge/Terraform-Infrastructure_as_Code-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)](https://terraform.io/)
-[![Kubernetes](https://img.shields.io/badge/Kubernetes-CKA_Orchestration-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)](https://kubernetes.io/)
-[![DevSecOps](https://img.shields.io/badge/DevSecOps-Shift--Left_Security-10B981?style=for-the-badge&logo=shield&logoColor=white)](#)
-[![FinOps](https://img.shields.io/badge/FinOps-Cloud_Cost_Optimization_-F59E0B?style=for-the-badge&logo=azureartifacts&logoColor=white)](#)
+<br/><br/>
 
-<br/>
+### <samp><span style="color:#38bdf8;">Senior DevSecOps Engineer</span> &nbsp;|&nbsp; <span style="color:#0284c7;">Cloud Solutions Architect</span></samp>
 
-[![Live Web Dossier](https://img.shields.io/badge/🌐_LAUNCH_LIVE_INTERACTIVE_WEB_DOSSIER-06B6D4?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sadiq84.github.io/sadiq84/)
-[![GitHub Repo](https://img.shields.io/badge/Source_Code-GitHub_Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sadiq84/sadiq84)
+<p align="center">
+  <strong>🔐 Senior DevSecOps Engineer &amp; Cloud Architect | Enterprise Cloud Infrastructure</strong><br/>
+  <em>Enterprise Cloud Infrastructure • Zero-Trust Security • GitOps Automation • Autonomous SRE • FinOps</em>
+</p>
 
-<br/>
+<!-- ACTION BADGES ROW (EXACT FORMAT MATCHING YOUR DESIGN) -->
+<p align="center">
+  <a href="https://www.linkedin.com" target="_blank"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Connect" /></a>
+  <a href="https://github.com/sadiq84?tab=repositories" target="_blank"><img src="https://img.shields.io/badge/GITHUB-REPOSITORIES-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repositories" /></a>
+  <a href="mailto:mohd.sadiq84@gmail.com"><img src="https://img.shields.io/badge/STATUS-AVAILABLE_FOR_SENIOR_ROLES-0E763A?style=for-the-badge&logo=statuspage&logoColor=white" alt="Available for Senior Roles" /></a>
+  <a href="https://sadiq84.github.io/sadiq84/" target="_blank"><img src="https://img.shields.io/badge/PORTFOLIO-LIVE_WEB_DOSSIER-0284C7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Web Dossier" /></a>
+</p>
+
+<!-- TECH CERTIFICATIONS ROW -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Microsoft_Azure-Solutions_Architect_Expert-0078D4?style=flat-square&logo=microsoftazure&logoColor=white" alt="Azure" />
+  <img src="https://img.shields.io/badge/Terraform-IaC_Automation-7B42BC?style=flat-square&logo=terraform&logoColor=white" alt="Terraform" />
+  <img src="https://img.shields.io/badge/Kubernetes-CKA_Production-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+  <img src="https://img.shields.io/badge/DevSecOps-Checkov_&amp;_Trivy-10B981?style=flat-square&logo=shield&logoColor=white" alt="DevSecOps" />
+  <img src="https://img.shields.io/badge/FinOps-28%25_Cost_Reduction-F59E0B?style=flat-square&logo=azureartifacts&logoColor=white" alt="FinOps" />
+</p>
 
 ```
   ========================================================================================
